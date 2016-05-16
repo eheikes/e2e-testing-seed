@@ -1,0 +1,26 @@
+{
+  "name": "e2e-testing-seed",
+  "version": "1.0.0",
+  "description": "Seed project for end-to-end testing using Nightwatch.js and Sauce Labs",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eheikes/e2e-testing-seed.git"
+  },
+  "keywords": [
+    "functional",
+    "acceptance",
+    "e2e",
+    "end-to-end",
+    "seed",
+    "starter",
+    "test",
+    "testing"
+  ],
+  "author": "Eric Heikes <eheikes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eheikes/e2e-testing-seed/issues"
+  },
+  "homepage": "https://github.com/eheikes/e2e-testing-seed"
+}
