@@ -6,6 +6,15 @@
     "type": "git",
     "url": "git+https://github.com/eheikes/e2e-testing-seed.git"
   },
+  "scripts": {
+    "nightwatch": "nightwatch --config tests/nightwatch.conf.js",
+    "selenium:install": "selenium-standalone install",
+    "selenium:start": "selenium-standalone start 2>/dev/null &",
+    "selenium:stop": "pkill -f .bin/selenium-standalone",
+    "selenium:wait": "scripts/wait-for-200.js http://localhost:4444/wd/hub/status",
+    "start": "npm run selenium:install && npm run selenium:start",
+    "test": "npm start && npm run selenium:wait && npm run nightwatch && npm run selenium:stop"
+  },
   "keywords": [
     "functional",
     "acceptance",
@@ -21,5 +30,9 @@
   "bugs": {
     "url": "https://github.com/eheikes/e2e-testing-seed/issues"
   },
-  "homepage": "https://github.com/eheikes/e2e-testing-seed"
+  "homepage": "https://github.com/eheikes/e2e-testing-seed",
+  "devDependencies": {
+    "nightwatch": "^0.9.0",
+    "selenium-standalone": "^5.1.0"
+  }
 }
