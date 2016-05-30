@@ -7,7 +7,7 @@
     "url": "git+https://github.com/eheikes/e2e-testing-seed.git"
   },
   "scripts": {
-    "nightwatch": "nightwatch --config tests/nightwatch.conf.js",
+    "nightwatch": "nightwatch --config tests/nightwatch.conf.js --env $env",
     "selenium:install": "selenium-standalone install",
     "selenium:start": "selenium-standalone start 2>/dev/null &",
     "selenium:stop": "pkill -f .bin/selenium-standalone",

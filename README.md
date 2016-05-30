@@ -21,6 +21,27 @@ Check the Nightwatch website for a [full reference](http://nightwatchjs.org/api)
 
 Check the Nightwatch website for a [developer guide](http://nightwatchjs.org/guide).
 
+## Using Sauce Labs
+
+To run your tests under Sauce Labs:
+
+1. Sign up for a free trial account at [saucelabs.com](https://saucelabs.com).
+2. Make a note of your SL username and access key (which can be found on the [User Profile -> User Settings](https://saucelabs.com/beta/user-settings) page).
+3. Store your username and access key on the command line:
+
+  ```
+  export SAUCE_USERNAME=your_username_here
+  export SAUCE_ACCESS_KEY=your-access-key-here
+  ```
+
+4. Run your tests under Sauce Labs by specifying the `saucelabs` environment:
+
+  ```
+  env=saucelabs npm test
+  ```
+
+You can modify the `saucelabs` environment in the Nightwatch configuration file.
+
 ## MIT License
 
 Copyright (c) 2016 Eric Heikes.
