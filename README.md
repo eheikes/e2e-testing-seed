@@ -15,11 +15,11 @@ Type `npm test` on the command line to run the tests.
 
 ## Writing Tests
 
-Check the Nightwatch website for a [full reference](http://nightwatchjs.org/api).
+Nightwatch will run all `*.spec.js` files in the [`tests` folder](tests). Check the Nightwatch website for a [full reference](http://nightwatchjs.org/api).
 
 ## Configuring Nightwatch
 
-Check the Nightwatch website for a [developer guide](http://nightwatchjs.org/guide).
+The Nightwatch configuration is in the [`nightwatch.conf.js` file](tests/nightwatch.conf.js). (Check the Nightwatch website for a [developer guide](http://nightwatchjs.org/guide).
 
 ## Using Sauce Labs
 
