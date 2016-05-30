@@ -5,16 +5,21 @@ This is a starter project for writing and running end-to-end (functional) tests,
 ## Getting Started
 
 1. This project uses [Node and npm](https://nodejs.org/), so you'll need that installed on your machine first.
+1. The default configuration uses Chrome for testing, so you'll need that installed as well.
 1. [Clone](https://help.github.com/articles/cloning-a-repository/) or [download](https://github.com/eheikes/e2e-testing-seed/archive/master.zip) this repository onto your local machine.
 1. Open a terminal in the cloned folder and run `npm install`.
 
+## Running Tests
+
+Type `npm test` on the command line to run the tests.
+
 ## Writing Tests
 
-:exclamation: TODO
+Check the Nightwatch website for a [full reference](http://nightwatchjs.org/api).
 
 ## Configuring Nightwatch
 
-:exclamation: TODO
+Check the Nightwatch website for a [developer guide](http://nightwatchjs.org/guide).
 
 ## MIT License
 
