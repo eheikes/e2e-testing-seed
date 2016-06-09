@@ -42,6 +42,13 @@ To run your tests under Sauce Labs:
 
 You can modify the `saucelabs` environment in the Nightwatch configuration file.
 
+## Things to Try
+
+* Add more tests. Test more of the google.com interface, or test a different website.
+* Play around with the [Nightwatch configuration](http://nightwatchjs.org/guide#settings-file). For example, test against a different browser.
+* Run tests in Sauce Labs (see above), [Browser Stack](https://www.browserstack.com/), or other cloud service.
+* Try setting up the project with Nightwatch yourself. (You can checkout the [`pre-setup` tag](https://github.com/eheikes/e2e-testing-seed/tree/pre-setup) for a start).
+
 ## MIT License
 
 Copyright (c) 2016 Eric Heikes.
