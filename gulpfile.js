@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var path = require('path');
 var selenium = require('selenium-standalone');
 var spawn = require('child_process').spawn;
 
@@ -18,11 +19,13 @@ gulp.task('selenium:start', ['selenium:install'], function(done) {
 });
 
 gulp.task('test', ['selenium:start'], function(done) {
+  var cmd = process.platform === 'win32' ? 'nightwatch.cmd' : 'nightwatch';
+  var fullCmd = path.join('node_modules', '.bin', cmd);
   var args = ['--config', 'tests/nightwatch.conf.js'];
   if (process.env.env) {
     args.push('--env', process.env.env);
   }
-  var nw = spawn('./node_modules/.bin/nightwatch', args);
+  var nw = spawn(fullCmd, args);
   nw.stdout.on('data', function(data) {
     console.log(data.toString());
   });
