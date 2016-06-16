@@ -20,7 +20,7 @@ gulp.task('selenium:start', ['selenium:install'], function(done) {
 gulp.task('test', ['selenium:start'], function(done) {
   var args = ['--config', 'tests/nightwatch.conf.js'];
   if (process.env.env) {
-    args.push('-env', process.env.env);
+    args.push('--env', process.env.env);
   }
   var nw = spawn('./node_modules/.bin/nightwatch', args);
   nw.stdout.on('data', function(data) {
