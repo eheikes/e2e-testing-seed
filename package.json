@@ -7,14 +7,9 @@
     "url": "git+https://github.com/eheikes/e2e-testing-seed.git"
   },
   "scripts": {
-    "nightwatch": "nightwatch --config tests/nightwatch.conf.js --env $env",
-    "postinstall": "npm run selenium:install",
-    "selenium:install": "selenium-standalone install",
-    "selenium:start": "selenium-standalone start 2>/dev/null &",
-    "selenium:stop": "scripts/kill-selenium.js",
-    "selenium:wait": "scripts/wait-for-200.js http://localhost:4444/wd/hub/status",
-    "start": "npm run selenium:install && npm run selenium:start",
-    "test": "npm start && npm run selenium:wait && npm run nightwatch && npm run selenium:stop"
+    "postinstall": "gulp selenium:install",
+    "start": "gulp selenium:start",
+    "test": "gulp test"
   },
   "keywords": [
     "functional",
@@ -34,6 +29,7 @@
   "homepage": "https://github.com/eheikes/e2e-testing-seed",
   "devDependencies": {
     "fkill": "^4.0.0",
+    "gulp": "^3.9.1",
     "nightwatch": "^0.9.0",
     "ps-list": "^3.1.0",
     "selenium-standalone": "^5.1.0"
